@@ -15,11 +15,11 @@
 
 using namespace std;
 
-int main()
+int main(int argc, char** argv)
 {
   /* -------------- INITIALIZING VARIABLES -------------- */
   int server, client; // socket file descriptors
-  int portNum = 2705; // port number
+  int portNum = stoi(argv[1]); // port number
   int bufSize = 1024; // buffer size
   char buffer[bufSize]; // buffer to transmit
   bool isExit = false; // var fo continue infinitly
